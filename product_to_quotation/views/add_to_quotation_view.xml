@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!--Kanban View-->
+        <record id="add_to_quotation_kanban_view_inherit" model="ir.ui.view">
+            <field name="name">add.to.quotation.kanban.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_kanban_global_click']" position="inside">
+                    <div invisible="not context.get('is_sale_view')" id="add_to_quotation" style="display: inline-block; padding-top:10%;">
+                        <a name="add_to_quot" type="object">
+                            <i class="fa fa-plus"/>
+                            Add to Quotation
+                        </a>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Tree View-->
+        <record id="add_to_quotation_tree_view_inherit" model="ir.ui.view">
+            <field name="name">add.to.quotation.tree.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='default_code']" position="before">
+                    <button name="add_to_quot"
+                            type="object"
+                            icon="fa-plus"
+                            invisible="not context.get('is_sale_view')">
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Form View-->
+        <record id="add_to_quotation_form_view_inherit" model="ir.ui.view">
+            <field name="name">add.to.quotation.form.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="add_to_quot" string="Add to Quotation" type="object" class="oe_highlight"
+                            invisible="not context.get('is_sale_view')"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Smart Button View-->
+        <record id="add_to_quotation_smart_button_view_inherit" model="ir.ui.view">
+            <field name="name">sale.order.form.view.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_products"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-plus"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}">
+                        <strong widget="statinfo">Add Products</strong>
+                    </button>
+                </div>
+            </field>
+        </record>
+
+    </data>
+</odoo>
