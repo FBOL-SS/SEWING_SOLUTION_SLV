@@ -267,7 +267,7 @@
                 <td> </td>
                 <td colspan="3"> </td>
                 <td style="height: 38.4px;">
-                  <span t-foreach="o.tax_line_ids" t-as="l">
+                  <span t-foreach="o.line_ids.filtered(lambda line: line.tax_line_id)" t-as="l">
                     <span t-if="l.name == 'IVA 13%'">
                       <span t-esc="o.amount_untaxed * 0.13"
                         t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
@@ -303,7 +303,7 @@
                 <td> </td>
                 <td colspan="3"> </td>
                 <td>
-                  <span t-foreach="o.tax_line_ids" t-as="l">
+                  <span t-foreach="o.line_ids.filtered(lambda line: line.tax_line_id)" t-as="l">
                 <span t-if="l.name == 'RETENCION 1%'">
                   <span t-esc="o.amount_untaxed * 0.01"
                         t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
