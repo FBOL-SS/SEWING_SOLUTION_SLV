@@ -212,15 +212,15 @@
                            t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                   </td>
                   <td class="text-left" t-foreach="o.fiscal_position_id" t-as="f" >
-                    <span t-if="f.name == 'Ventas No Sujetas'" t-esc="l.price_subtotal"
+                    <span t-if="f.name == 'NO SUJETAS'" t-esc="l.price_subtotal"
                           t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                   </td>
                   <td class="text-left" t-foreach="o.fiscal_position_id" t-as="f">
-                    <span t-if="f.name == 'Ventas Exentas'" t-esc="l.price_subtotal"
+                    <span t-if="f.name == 'EXENTAS'" t-esc="l.price_subtotal"
                           t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                   </td>
                   <td class="text-left" t-foreach="o.fiscal_position_id" t-as="f">
-                    <span t-if="f.name != 'Ventas No Sujetas' and  f.name != 'Ventas Exentas'" t-esc="l.price_subtotal"
+                    <span t-if="f.name != 'NO SUJETAS' and  f.name != 'EXENTAS'" t-esc="l.price_subtotal"
                           t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                   </td>
                   </tr>
@@ -228,7 +228,7 @@
               </table>
           </div>
 
-          <!-- tabla 3-->
+         <!-- tabla 3-->
 
           <div class="footer">
           <style>
@@ -254,7 +254,11 @@
                   <td style="width:6.09%"> </td>
                   <td style="width:6.09%"> </td>
                   <td style="width:9.64%">
-                    <span t-field="o.amount_untaxed"/>
+                <span t-foreach="o.fiscal_position_id" t-as="f">
+                <span t-if="f.name != 'NO SUJETAS' and  f.name != 'EXENTAS'"
+                      t-esc="o.amount_untaxed"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                </span>
                   </td>
                 </tr>
 
@@ -263,19 +267,91 @@
                 <td> </td>
                 <td colspan="3"> </td>
                 <td style="height: 38.4px;">
-                 <span />
+                  <span t-foreach="o.tax_line_ids" t-as="l">
+                    <span t-if="l.name == 'IVA 13%'">
+                      <span t-esc="o.amount_untaxed * 0.13"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                    </span>
+                    <span t-else="l.name != 'IVA 13%'">
+                      <span />
+                    </span>
+                  </span>
                 </td>
               </tr>
-                  <span t-field="o.amount_tax"/>
+
               <tr>
                 <td> </td>
                 <td> </td>
                 <td colspan="3" style="height: 38.4px"> </td>
                 <td>
-                    <span t-field="o.amount_total"/>
+                <span t-foreach="o.fiscal_position_id" t-as="f">
+                <span t-if="f.name != 'NO SUJETAS' and  f.name != 'EXENTAS'"
+                      t-esc="o.amount_total"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                </span>
                 </td>
               </tr>
-              
+
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td style="color: white;">. </td>
+              </tr>
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td>
+                  <span t-foreach="o.tax_line_ids" t-as="l">
+                <span t-if="l.name == 'RETENCION 1%'">
+                  <span t-esc="o.amount_untaxed * 0.01"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                </span>
+
+                <span t-else="l.name != 'RETENCION 1%'">
+                  <span  />
+                </span>
+              </span>
+                </td>
+              </tr>
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td style="color: white;"> </td>
+              </tr>
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td style="color: white;">. </td>
+              </tr>
+
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"></td>
+                <td>
+                  <span t-foreach="o.fiscal_position_id" t-as="f">
+                    <span t-if="f.name == 'NO SUJETAS'" t-esc="o.amount_total"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3" style="height: 55.4px;"> </td>
+                <td>
+                  <span t-foreach="o.fiscal_position_id" t-as="f">
+                    <span t-if="f.name == 'EXENTAS'" t-esc="o.amount_total"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                  </span>
+                </td>
+              </tr>
+
               <tr>
                 <td> </td>
                 <td> </td>
