@@ -7,249 +7,364 @@
         <div class="header">
           
         </div>
-        <div class="page article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
-          <style>
-            table{
+        <div t-att-data-oe-model="o._name" t-att-data-oe-id="o.id" t-att-data-oe-lang="o and o.env.context.get('lang')" class="page article">
+          <style type="text/css">
+            .mytable {
               width: 100%;
-              border-collapse: collapse;
-            }
-            table td, table th{
-              padding: 1px 2px;
-              vertical-align: middle;
-            }
-            #encabezado{
-              font-size: 11px;
-            }
-            #encabezado td{
-              border: 1px black;
-              border-style: solid;
-            }
-            #encabezado span{
-              font-weight: bold;
-            }
-            #giro, #dirrecion{
-              overflow:hidden;
-              white-space:nowrap;
-              text-overflow: ellipsis;
-            }
-            #detalle th{
-              font-size: x-small;
-              border-top: 1px solid black;
-              border-bottom: 1px solid black;
-            }
-            #detalle td{
-              border: 1px solid black;
-            }
-            #detalle span{
-              font-size: 11px;
-            }
-            span{
-              font-weight:bold;
-            }
-          </style>
+              }
+              .tabla-trh td {
+              font-size: 22px;
+              padding: 12px 4px;
+            border: 1px solid red;
+              }
+            </style>
+
           <div class="row">
-            <table id="encabezado">
+            <table class="mytable tabla-trh" >
               <tr>
-                <td colspan="3">
-                  Cliente: <span t-field="o.partner_id"/>
+                <td width="8.62%" class="text-center">
+                  <span t-esc="o.invoice_date.strftime('%d')" />
+                </td>   <!--fecha-->
+                <td width="10.15%" class="text-center">
+                  <span t-esc="o.invoice_date.strftime('%m')" />
                 </td>
-                <td>
-                  Fecha: <span t-field="o.invoice_date"/>
+                <td width="10.15%" class="text-center">
+                  <span t-esc="o.invoice_date.strftime('%Y')" />
                 </td>
+                <td width="9.6%"> </td>
+                <td width="9.6%"> </td>
+                <td width="14.21%"> </td>
+                <td width="10.15%"> </td>
+                <td width="19.90%"> <span t-field="o.partner_id.nrc"/></td>
               </tr>
-              <tr>
-                <td id="dirrecion" colspan="4">
-                  Dirrecion:
-                      <span t-if="o.partner_id.street">
+            </table>
+            </div>
+
+          <div class="row">
+          <table class="mytable tabla-trh">
+            <tr>
+              <td width="8.62%"> </td>
+              <td width="53.80%">
+                <span t-field="o.partner_id"/>
+              </td>
+              <td width="5.07%"> </td>
+              <td width="31.47%">
+                <span t-field="o.partner_id.vat"/>
+              </td>
+            </tr>
+          </table>
+          </div>
+
+          <div class="row">
+          <table class="mytable tabla-trh">
+            <tr>
+              <td width="8.62%"> </td>
+              <td width="53.80%">
+                <span t-if="o.partner_id.street">
                         <span t-field="o.partner_id.street"/>
                       </span>
                       <span t-if="o.partner_id.street2">
                         , <span t-field="o.partner_id.street2"/>
                       </span>
-                      <span t-if="o.partner_id.city">
-                        , <span t-field="o.partner_id.city"/>
-                      </span>
-                </td>
+              </td>
+              <td width="20.30%"> </td>
+              <td width="16.75%" style="font-size: 16px">
+                <span t-field="o.partner_id.giro"/>
+              </td>
+            </tr>
+          </table>
+          </div>
+
+          <div class="row">
+          <table class="mytable tabla-trh">
+            <tr>
+              <td width="8.62%"> </td>
+              <td width="23.35%">
+                <span t-field="o.partner_id.munic_id"/>
+              </td>
+              <td width="11.16%"> </td>
+              <td width="19.28%">
+                <span t-field="o.partner_id.state_id"/>
+
+              </td>
+              <td width="14.21%"> </td>
+              <td width="22.84%">  </td>
+            </tr>
+          </table>
+          </div>
+
+          <div class="row">
+          <table class="mytable tabla-trh">
+            <tr>
+              <td width="8.62%"> </td>
+              <td width="24.36%">
+                <span t-field="o.partner_id.phone"/>
+              </td>
+              <td width="34.01%"> </td>
+              <td width="31.97%"> </td>
+            </tr>
+          </table>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+
+          <!-- tabla 2-->
+
+          <style>
+            #tabla-2
+            {
+            width: 100%;
+            }
+
+            #tabla-2 td
+            {
+            font-size: 23px;
+            }
+
+          </style>
+
+          <div class="row">
+            <table id="tabla-2" class="text-center">
+              <tr>
+                <td style="width:32%; height: 45px;" > </td>
+                <td style="width:32%"> </td>
+                <td style="width:36%" colspan="2"> </td>
               </tr>
               <tr>
-                <td style="width: 25%;">
-                  Municipio: <span t-field="o.partner_id.munic_id"/>
+                <td>
+                  <span t-field="o.consignacion"/>
                 </td>
-                <td style="width: 25%;">
-                  Departamento: <span t-field="o.partner_id.state_id"/>
+                <td>
+                  <span t-field="o.no_orden"/>
                 </td>
-                <td style="width: 25%;">
-                  Pais: <span t-field="o.partner_id.country_id"/>
-                </td>
-                <td style="width: 25%;">
-                  Telefono: <span t-field="o.partner_id.phone"/>
+                <td colspan="2">
+                  <span t-field="o.invoice_payment_term_id"/>
                 </td>
               </tr>
+
               <tr>
-                <td id="giro" colspan="4">
-                  Giro: <span t-field="o.partner_id.giro"/>
-                </td>
+                <td style="width:32%; height: 43.5px; padding-top: 4px;"> </td>
+                <td style="width:32%"> </td>
+                <td style="width:18%"> </td>
+                <td style="width:18%"> </td>
               </tr>
               <tr>
+                <td style="padding-top: 5px;"> </td>
+                <td> <span t-field="o.transporte_id"/> </td>
+                <td> <span t-field="o.invoice_date_due"/> </td>
                 <td>
-                  N.R.C: <span t-field="o.partner_id.nrc"/>
-                </td>
-                <td>
-                  N.I.T: <span t-field="o.partner_id.vat"/>
-                </td>
-                <td>
-                  Condiciones de pago: <span t-field="o.invoice_payment_term_id"/>
-                </td>
-                <td>
-                  Fecha de Vencimiento: <span t-field="o.invoice_date_due"/>
+                  <span t-field="o.invoice_date_due"/>
                 </td>
               </tr>
             </table>
           </div>
-          <br />
+
+          <br/>
+          <br/>
+          <!-- tabla 3-->
+
+          <style>
+            #tabla-3
+            {
+            width: 100%;
+            }
+
+            #tabla-3 td
+            {
+            font-size: 23px;
+            border: 1px solid red;
+            }
+            #tabla-3 th{
+            padding: 18px 2px;
+            }
+
+          </style>
+
           <div class="row">
-            <table id="detalle">
+            <table id="tabla-3" class="text-center">
               <thead>
                 <tr>
-                  <th class="text-center" style="width: 60%;">Descripcion</th>
-                  <th class="text-center" style="width: 10%;">Cantidad</th>
-                  <th class="text-center" style="width: 10%">Precio Unitario</th>
-                  <th class="text-center" style="width: 5%; font-size: 8px;">Ventas No Sujetas</th>
-                  <th class="text-center" style="width: 5%;">Ventas Exentas</th>
-                  <th class="text-center" style="width: 10%;">Ventas Afectas</th>
+                  <th style="width:9.64%; height: 37px;"> </th>
+                  <th style="width:15.30%"> </th>
+                  <th style="width:42.05; padding: 18px 5px"> </th>
+                  <th style="width:9.64%"> </th>
+                  <th style="width:6.09%"> </th>
+                  <th style="width:6.09%"> </th>
+                  <th style="width:9.64%"> </th>
                 </tr>
               </thead>
-              <tbody class="invoice_tbody">
+
+              <tbody>
                 <tr t-foreach="o.invoice_line_ids" t-as="l">
-                  <td><span t-field="l.name"/></td>
-                  <td class="text-right">
+                  <td>
                       <span t-field="l.quantity"/>
                       <span t-field="l.uom_id"  groups="product.group_uom"/>
                   </td>
-                  <td class="text-right">
-                      <span t-field="l.price_unit" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                  <td>
+                  <span style="padding-left 5px" t-field="l.product_id.default_code"/>
                   </td>
-                  <td class="text-right">
-                      <span />
+                  <td class="text-justify">
+                    <span style="padding-left 5px" t-field="l.product_id.name"/>
                   </td>
-                  <td class="text-right">
-                      <span />
+                  <td>
+                    <span t-esc="l.price_unit"
+                           t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                   </td>
-                  <td class="text-right">
-                      <span t-field="l.price_subtotal" 
+                  <td class="text-left" t-foreach="o.fiscal_position_id" t-as="f" >
+                    <span t-if="f.name == 'Ventas No Sujetas'" t-esc="l.price_subtotal"
                           t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                   </td>
-                </tr>
+                  <td class="text-left" t-foreach="o.fiscal_position_id" t-as="f">
+                    <span t-if="f.name == 'Ventas Exentas'" t-esc="l.price_subtotal"
+                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                  </td>
+                  <td class="text-left" t-foreach="o.fiscal_position_id" t-as="f">
+                    <span t-if="f.name != 'Ventas No Sujetas' and  f.name != 'Ventas Exentas'" t-esc="l.price_subtotal"
+                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                  </td>
+                  </tr>
               </tbody>
-            </table>
+              </table>
           </div>
-        </div>
-        <div class="footer">
+
+          <!-- tabla 3-->
+
+          <div class="footer">
           <style>
-            #total{
-              border-collapse: collapse;
-              width: 100%;
+            #tabla-t
+            {
+            width: 100%;
             }
-            #total td{
-              border: 1px solid black;
-              padding: 1px 2px;
-              vertical-align: middle;
-              font-size: 10px;
-            }
-            span{
-              font-weight:bold;
+            #tabla-t td
+            {
+            font-size: 23px;
+            border: 1px solid red;
             }
           </style>
+
           <div class="row">
-            <table id="total">
-              <tr>
-                <td style="width: 70%;">
-                  Cantidad en Letras:
+            <table id="tabla-t" class="text-center">
+                <tr>
+                  <td style="width:9.64%; height: 40.4px;"> </td>
+                  <td style="width:57.86">
                     <span t-field="o.amount_text"/>
+                  </td>
+                  <td style="width:9.64%"> </td>
+                  <td style="width:6.09%"> </td>
+                  <td style="width:6.09%"> </td>
+                  <td style="width:9.64%">
+                <span t-foreach="o.fiscal_position_id" t-as="f">
+                <span t-if="f.name != 'Ventas No Sujetas' and  f.name != 'Ventas Exentas'"
+                      t-esc="o.amount_untaxed"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                </span>
+                  </td>
+                </tr>
+
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td style="height: 38.4px;">
+                  <span t-foreach="o.tax_line_ids" t-as="l">
+                    <span t-if="l.name == 'IVA 13% Ventas'">
+                      <span t-esc="o.amount_untaxed * 0.13"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                    </span>
+                    <span t-else="l.name != 'IVA 13% Ventas'">
+                      <span />
+                    </span>
+                  </span>
                 </td>
-                <td style="width: 10%;">
-                  Sumas:
+              </tr>
+
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3" style="height: 38.4px"> </td>
+                <td>
+                <span t-foreach="o.fiscal_position_id" t-as="f">
+                <span t-if="f.name != 'Ventas No Sujetas' and  f.name != 'Ventas Exentas'"
+                      t-esc="o.amount_total"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                </span>
                 </td>
-                <td style="width: 5%;" class="text-right">
-                  <span />
-                </td>
-                <td style="width: 5%;" class="text-right">
-                  <span />
-                </td>
-                <td style="width: 10%;" class="text-right">
-                  <span t-field="o.amount_untaxed"/>
+              </tr>
+
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td style="color: white;">. </td>
+              </tr>
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td>
+                  <span t-foreach="o.tax_line_ids" t-as="l">
+                <span t-if="l.name == 'Retención 1%'">
+                  <span t-esc="o.amount_untaxed * 0.01"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                </span>
+
+                <span t-else="l.name != 'Retención 1%'">
+                  <span  />
+                </span>
+              </span>
                 </td>
               </tr>
               <tr>
-                <td colspan="2" rowspan="5" class="text-center" style="font-size: 8px; text-align:justify;">
-                  <!--
-                  Yo el comprador o adquiriente acepto esta factura cambiante y me obligo a pagar el valor que ampara este documento,
-                  si no pago esta obligación en el plazo y forma aquí establecido, la cantidad adeudada genera un interés del 5% mensual
-                  el cual se calculará desde la fecha de emisión de este titulo valor y adicionalmente generará un interés penal por
-                  mora del 24% anual, en el que se calculará contado a partir del día siguiente del vencimiento, fuera de saldo total
-                  o de una o varias cuotas conforme queda establecido. Señalado como mi domicilio para el cumplimiento de esta obligación
-                  de la Ciudad de San Salvador, a la jurisdicción de cuyos tribunales me someto en caso de acción judicial, renuncio a
-                  derecho de apelar el decreto de embargo, sentencia demate y cualquier otra providencia alzable en el juicio que se
-                  promoviere como consecuencia del incumplimiento de esta obligación, siendo facultad de mi acreedor, proponer el
-                  nombramiento del depositario judicial de bienes que se me embarguen, a quien desde ya revelo la obligación de rendir fianza.
-                  -->
-                  Yo <span t-field="o.partner_id"/> el comprador o adquiriente acepto por este PAGARE, sin protesto,
-                  el dia <span t-esc="time.strftime('%A, %d de %B de %Y',time.strptime(str(o.invoice_date_due),'%Y-%m-%d'))"/>,
-                  me(nos) obligo(amos)a pagar en San Salvador, a la orden de <span t-field="o.company_id"/>
-                  la suma de <span t-field="o.amount_text"/> 
-                  más intereses del 5% por ciento mensual, pagaderos en caso de mora
-                  reconoceré(mos) intereses del 7% por ciento mensual.
-                  Para los efectos de esta obligación mercantil, fijo (amos) como domicilio  especial la ciudad
-                  de San Salvador, y en el caso de acción judicial, renuncio (amos) al derecho de apelar la
-                  sentencia de remate y toda otra providencia apelable que se dictare en el juicio ejecutivo o
-                  sus incidencias siendo a mi (nuestro) cargo, cualquier gasto que la sociedad hiciere en el
-                  cobro de este Pagaré. inclusive los llamados personales y aún cuando por regla general no
-                  hubiere condenación en costos y faculto(amos) a la sociedad para que designe a la persona
-                  depositaria de los bienes que se embarguen a quien relevo de la obligación de rendir fianza.
-                  San Salvador.
-                </td>
-                <td colspan="2">
-                  I.V.A.
-                </td>
-                <td class="text-right">
-                  <span t-field="o.amount_tax"/>
-                </td>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td style="color: white;"> </td>
               </tr>
               <tr>
-                <td colspan="2">
-                  SubTotal
-                </td>
-                <td class="text-right">
-                  <span t-field="o.amount_total"/>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td style="color: white;">. </td>
+              </tr>
+
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"></td>
+                <td>
+                  <span t-foreach="o.fiscal_position_id" t-as="f">
+                    <span t-if="f.name == 'Ventas No Sujetas'" t-esc="o.amount_total"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                  </span>
                 </td>
               </tr>
+
               <tr>
-                <td colspan="2">
-                  <span style="font-size: 8px;font-weight:normal;">Ventas No Sujetas</span>
-                  <span style="color: white;">A</span>
-                </td>
-                <td class="text-right">
-                  <span />
+                <td> </td>
+                <td> </td>
+                <td colspan="3" style="height: 55.4px;"> </td>
+                <td>
+                  <span t-foreach="o.fiscal_position_id" t-as="f">
+                    <span t-if="f.name == 'Ventas Exentas'" t-esc="o.amount_total"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                  </span>
                 </td>
               </tr>
+
               <tr>
-                <td colspan="2">
-                  Ventas Exentas
-                </td>
-                <td class="text-right">
-                  <span />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  Total
-                </td>
-                <td class="text-right">
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td>
                   <span t-field="o.amount_total"/>
                 </td>
               </tr>
             </table>
+            </div>
           </div>
+
+
         </div>
       </t>
     </template>
