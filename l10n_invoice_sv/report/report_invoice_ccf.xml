@@ -268,11 +268,11 @@
                 <td colspan="3"> </td>
                 <td style="height: 38.4px;">
                   <span t-foreach="o.line_ids.filtered(lambda line: line.tax_line_id)" t-as="l">
-                    <span t-if="l.name == 'IVA 13% Ventas'">
+                    <span t-if="l.name == 'IVA 13%'">
                       <span t-esc="o.amount_untaxed * 0.13"
                         t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                     </span>
-                    <span t-else="l.name != 'IVA 13% Ventas'">
+                    <span t-else="l.name != 'IVA 13%'">
                       <span />
                     </span>
                   </span>
