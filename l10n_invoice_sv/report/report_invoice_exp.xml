@@ -72,7 +72,7 @@
               </td>
               <td width="8.20%"> </td>
               <td width="26.15%">
-                <span t-field="o.partner_id.nit"/>
+                <span t-field="o.partner_id.vat"/>
               </td>
             </tr>
           </table>
@@ -120,7 +120,7 @@
                   <span t-field="o.customer_no"/>
                 </td>
                 <td>
-                  <span t-field="o.orden_no"/>
+                  <span t-field="o.no_orden"/>
                 </td>
                 <td colspan="2">
                   <span t-field="o.payment_term_id"/>
@@ -135,7 +135,7 @@
               </tr>
               <tr>
                 <td style="padding-top: 5px;"> </td>
-                <td> <span t-field="o.envio"/>  </td>
+                <td> <span t-field="o.transporte_id"/>  </td>
                 <td>  <span t-field="o.date_invoice"/> </td>
                 <td>
                   <span t-field="o.invoice_date_due"/>
