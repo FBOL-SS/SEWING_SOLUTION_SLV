@@ -226,9 +226,11 @@
           <div class="row">
             <table id="total">
               <tr>
+                <!--
                 <td style="width: 67.5%;" class="text-center">
                   <span t-field="o.amount_text"/>
                 </td>
+                -->
                 <td style="width: 15%;"> </td>
                 <td style="width: 16.75%; height: 45px;" class="text-center">
                   <span t-field="o.amount_untaxed"/>
