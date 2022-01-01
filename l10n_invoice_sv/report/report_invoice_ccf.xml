@@ -152,7 +152,7 @@
               <tr>
                 <td style="padding-top: 5px;"> </td>
                 <td> <span t-field="o.transporte_id"/> </td>
-                <td> <span t-field="o.invoice_date_due"/> </td>
+                <td> <span t-field="o.invoice_date"/> </td>
                 <td>
                   <span t-field="o.invoice_date_due"/>
                 </td>
@@ -173,7 +173,7 @@
             #tabla-3 td
             {
             font-size: 23px;
-            border: 1px solid red;
+            border: 1px solid white;
             }
             #tabla-3 th{
             padding: 18px 2px;
@@ -235,7 +235,7 @@
             #tabla-t td
             {
             font-size: 23px;
-            border: 1px solid red;
+            border: 1px solid white;
             }
           </style>
 
