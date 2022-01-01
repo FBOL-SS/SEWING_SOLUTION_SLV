@@ -254,11 +254,7 @@
                   <td style="width:6.09%"> </td>
                   <td style="width:6.09%"> </td>
                   <td style="width:9.64%">
-                <span t-foreach="o.fiscal_position_id" t-as="f">
-                <span t-if="f.name != 'Ventas No Sujetas' and  f.name != 'Ventas Exentas'"
-                      t-esc="o.amount_untaxed"
-                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
-                </span>
+                    <span t-field="o.amount_untaxed"/>
                   </td>
                 </tr>
 
@@ -284,11 +280,7 @@
                 <td> </td>
                 <td colspan="3" style="height: 38.4px"> </td>
                 <td>
-                <span t-foreach="o.fiscal_position_id" t-as="f">
-                <span t-if="f.name != 'Ventas No Sujetas' and  f.name != 'Ventas Exentas'"
-                      t-esc="o.amount_total"
-                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
-                </span>
+                  <span t-field="o.amount_total"/>
                 </td>
               </tr>
 
