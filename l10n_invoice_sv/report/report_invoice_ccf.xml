@@ -15,7 +15,7 @@
               .tabla-trh td {
               font-size: 22px;
               padding: 12px 4px;
-            border: 1px solid red;
+            border: 1px solid white;
               }
             </style>
 
