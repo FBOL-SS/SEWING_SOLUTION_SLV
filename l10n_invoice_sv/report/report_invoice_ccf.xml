@@ -215,7 +215,6 @@
                       <span t-field="l.price_subtotal" 
                           t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                   </td>
-                  </td>
                 </tr>
               </tbody>
               </table>
