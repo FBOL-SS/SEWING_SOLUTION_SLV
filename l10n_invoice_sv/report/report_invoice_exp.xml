@@ -30,7 +30,7 @@
               </td>
               <td width="5.64%"> </td>
               <td width="31.28%">
-                <span t-field="o.date_invoice"/>
+                <span t-field="o.invoice_date"/>
               </td>
             </tr>
           </table>
@@ -138,7 +138,7 @@
                 <td> <span t-field="o.envio"/>  </td>
                 <td>  <span t-field="o.date_invoice"/> </td>
                 <td>
-                  <span t-field="o.date_due"/>
+                  <span t-field="o.invoice_date_due"/>
                 </td>
               </tr>
             </table>
