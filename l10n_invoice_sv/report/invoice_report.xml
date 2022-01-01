@@ -46,13 +46,13 @@
 	      <field name="default" eval="True"/>
 	      <field name="format">Letter</field>
 	      <field name="orientation">Portrait</field>
-	      <field name="margin_top">35</field>
-	      <field name="margin_bottom">60</field>
-	      <field name="margin_left">3</field>
-	      <field name="margin_right">3</field>
+	      <field name="margin_top">44</field>
+	      <field name="margin_bottom">87</field>
+	      <field name="margin_left">8</field>
+	      <field name="margin_right">11</field>
 	      <field name="header_line" eval="False"/>
-	      <field name="header_spacing">35</field>
-	      <field name="dpi">90</field>
+	      <field name="header_spacing">10</field>
+	      <field name="dpi">160</field>
 		</record>
 
         <record id="report_credito_fiscal" model="ir.actions.report">
