@@ -117,7 +117,7 @@
               </tr>
               <tr>
                 <td>
-                  <span t-field="o.customer_no"/>
+                  <span t-field="o.consignacion"/>
                 </td>
                 <td>
                   <span t-field="o.no_orden"/>
