@@ -127,7 +127,7 @@
           <div class="row">
             <table id="tabla-2" class="text-center">
               <tr>
-                <td style="width:32%; height: 45px;" > </td>
+                <td style="width:32%; height: 40px;" > </td>
                 <td style="width:32%"> </td>
                 <td style="width:36%" colspan="2"> </td>
               </tr>
@@ -144,7 +144,7 @@
               </tr>
 
               <tr>
-                <td style="width:32%; height: 43.5px; padding-top: 4px;"> </td>
+                <td style="width:32%; height: 41.5px; padding-top: 4px;"> </td>
                 <td style="width:32%"> </td>
                 <td style="width:18%"> </td>
                 <td style="width:18%"> </td>
@@ -185,7 +185,7 @@
             <table id="tabla-3" class="text-center">
               <thead>
                 <tr>
-                  <th style="width:9.64%; height: 37px;"> </th>
+                  <th style="width:9.64%; height: 34px;"> </th>
                   <th style="width:15.30%"> </th>
                   <th style="width:42.05; padding: 18px 5px"> </th>
                   <th style="width:9.64%"> </th>
