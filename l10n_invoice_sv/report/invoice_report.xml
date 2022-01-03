@@ -46,12 +46,12 @@
 	      <field name="default" eval="True"/>
 	      <field name="format">Letter</field>
 	      <field name="orientation">Portrait</field>
-	      <field name="margin_top">44</field>
-	      <field name="margin_bottom">87</field>
+	      <field name="margin_top">40</field>
+	      <field name="margin_bottom">70</field>
 	      <field name="margin_left">8</field>
 	      <field name="margin_right">11</field>
 	      <field name="header_line" eval="False"/>
-	      <field name="header_spacing">10</field>
+	      <field name="header_spacing">15</field>
 	      <field name="dpi">160</field>
 		</record>
 
