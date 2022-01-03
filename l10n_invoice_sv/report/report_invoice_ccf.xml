@@ -332,12 +332,7 @@
                 <td> </td>
                 <td> </td>
                 <td colspan="3" style="height: 55.4px;"> </td>
-                <td>
-                  <span t-foreach="o.fiscal_position_id" t-as="f">
-                    <span t-if="f.name == 'Ventas Exentas'" t-esc="o.amount_total"
-                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
-                  </span>
-                </td>
+                <td> </td>
               </tr>
 
               <tr>
@@ -345,9 +340,20 @@
                 <td> </td>
                 <td colspan="3"> </td>
                 <td>
-                  <span t-field="o.amount_total"/>
+                  <span t-foreach="o.fiscal_position_id" t-as="f">
+                    <span t-if="f.name == 'Ventas Exentas'" t-esc="o.amount_total"
+                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                  </span>
                 </td>
               </tr>
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td colspan="3"> </td>
+                <td>
+                  <span t-field="o.amount_total"/>
+                </td>
+              </tr>   
             </table>
             </div>
           </div>
