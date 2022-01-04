@@ -1,0 +1,21 @@
+Date 29/01/2021
+version:- 14.0.0.1
+issue solve:-
+	-  It throws following warning when we have selected the future date in the invoice  
+
+
+date 1st feb 2021
+version:- 14.0.0.2
+issue solve:-
+	- proper formate sequence not generate issue solve
+
+date 10th feb 2021
+version 14.0.0.3
+issue solve:-
+	- our module work with prefix , if prefix not given getting warning issue solve
+
+=> 14.0.0.4 : Improved an index as per latest changes.
+
+
+Version: 14.0.0.5 | 14/12/2021 :-
+	- In sequence there "-" and "/" of multiple time is not allowed for that we added some customisation, so we can avoid the warning.
