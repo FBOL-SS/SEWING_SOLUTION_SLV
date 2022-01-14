@@ -135,7 +135,7 @@
               </tr>
               <tr>
                 <td style="padding-top: 5px;"> </td>
-                <td> <span t-field="o.transporte_id"/>  </td>
+                <td> <span t-field="o.invoice_incoterm_id"/>  </td>
                 <td>  <span t-field="o.invoice_date"/> </td>
                 <td>
                   <span t-field="o.invoice_date_due"/>
