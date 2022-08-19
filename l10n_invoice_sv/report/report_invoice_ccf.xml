@@ -258,12 +258,22 @@
                 </span>
                 </td>
               </tr>
-
+                <tr>
+                <td> </td>
+                <td> </td>
+                <td>
+                </td>
+              </tr>
               <tr>
                 <td> </td>
                 <td> </td>
-                <td style="height: 35px;" class="text-center">
-                  <span t-field="o.amount_total"/>
+                <td>
+                </td>
+              </tr>     
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td>
                 </td>
               </tr>
               <tr>
