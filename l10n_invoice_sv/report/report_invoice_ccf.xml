@@ -239,7 +239,6 @@
                   <span t-field="o.amount_tax"/>
                 </td>
               </tr>              
-              </tr>
                 <tr>
                 <td> </td>
                 <td> </td>
