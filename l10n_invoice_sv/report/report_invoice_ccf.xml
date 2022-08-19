@@ -194,7 +194,7 @@
                   </td>
                   <td>
                   </td>
-                  <td class="text-right">
+                  <td class="text-left">
                     <span t-esc="l.price_subtotal"
                           t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                   </td>
@@ -242,7 +242,7 @@
               <tr>
                 <td> </td>
                 <td> </td>
-                <td style="height: 35px;" class="text-center" >
+                <td style="height: 15px;" class="text-center" >
                   <span t-field="o.amount_tax"/>
                 </td>
               </tr>              
@@ -250,7 +250,7 @@
               <tr>
                 <td> </td>
                 <td> </td>   
-                <td style="height: 25px;" class="text-center" >
+                <td style="height: 10px;" class="text-center" >
                   <span t-field="o.amount_total"/>
                 </td>
               </tr>
@@ -266,6 +266,13 @@
                 </td>
               </tr>
 
+              <tr>
+                <td> </td>
+                <td> </td>
+                <td style="height: 35px;" class="text-center">
+                  <span t-field="o.amount_total"/>
+                </td>
+              </tr>
               <tr>
                 <td> </td>
                 <td> </td>
