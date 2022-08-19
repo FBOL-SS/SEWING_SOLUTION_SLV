@@ -235,7 +235,7 @@
               <tr>
                 <td> </td>
                 <td> </td>
-                <td style="height: 15px;" class="text-center" >
+                <td style="height: 5px;" class="text-center" >
                   <span t-field="o.amount_tax"/>
                 </td>
               </tr>              
