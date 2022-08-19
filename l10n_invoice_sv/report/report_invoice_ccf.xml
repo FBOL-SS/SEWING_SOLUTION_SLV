@@ -232,13 +232,6 @@
                   <span t-field="o.amount_untaxed"/>
                 </td>
               </tr>
-
-              <tr>
-                <td> </td>
-                <td> </td>
-                <td style="height: 65px;" class="text-right"> </td>
-              </tr>
-              
               <tr>
                 <td> </td>
                 <td> </td>
