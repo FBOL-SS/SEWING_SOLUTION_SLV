@@ -243,7 +243,7 @@
               <tr>
                 <td> </td>
                 <td> </td>   
-                <td style="height: 10px;" class="text-center" >
+                <td style="height: 45px;" class="text-center" >
                   <span t-field="o.amount_total"/>
                 </td>
               </tr>
