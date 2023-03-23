@@ -27,7 +27,7 @@
                   </tr>
                   <tr>
                     <td style="text-align:center;">
-                      <span t-field="o.number"/>
+                      <span/>
                     </td>
                   </tr>
                   <tr>
