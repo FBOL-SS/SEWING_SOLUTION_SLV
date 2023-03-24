@@ -677,7 +677,7 @@
                     Telefono: <span t-field="o.partner_id.phone"/>
                   </td>
                 </tr>
-                <!<tr>
+                <tr>
                   <td id="giro" colspan="4">
                     Giro: <span t-field="o.partner_id.giro"/>
                   </td>
