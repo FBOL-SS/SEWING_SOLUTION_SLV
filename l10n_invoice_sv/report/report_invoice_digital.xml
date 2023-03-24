@@ -95,7 +95,7 @@
                 </tr>
                 <tr>
                   <td id="dirrecion" colspan="4">
-                    Dirrecion:
+                    Direcion:
                         <span t-if="o.partner_id.street">
                           <span t-field="o.partner_id.street"/>
                         </span>
@@ -653,8 +653,8 @@
                   </td>
                 </tr>
                 <tr>
-                  <td id="dirrecion" colspan="4">
-                    Dirrecion:
+                  <td id="direcion" colspan="4">
+                    Direcion:
                         <span t-if="o.partner_id.street">
                           <span t-field="o.partner_id.street"/>
                         </span>
@@ -677,18 +677,18 @@
                     Telefono: <span t-field="o.partner_id.phone"/>
                   </td>
                 </tr>
-                <!--<tr>
+                <!<tr>
                   <td id="giro" colspan="4">
                     Giro: <span t-field="o.partner_id.giro"/>
                   </td>
-                </tr>-->
+                </tr>
                 <tr>
-                  <!--<td>
+                  <<td>
                     N.R.C: <span t-field="o.partner_id.nrc"/>
                   </td>
                   <td>
                     N.I.T: <span t-field="o.partner_id.vat"/>
-                  </td>-->
+                  </td>
                   <td colspan="2">
                     Condiciones de pago: <span t-field="o.invoice_payment_term_id"/>
                   </td>
