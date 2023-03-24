@@ -2,6 +2,85 @@
 <odoo>
   <data>
     <template id="report_invoice_document_digital">
+        <div class="page article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+
+            <style>
+                span, td, th
+                {
+                 font-size: 23px;
+                }
+                td,  th
+                {
+                    padding: 6px;
+                }
+            .c-nombre
+                {
+                    font-size: 27px;
+                }
+                #detalles-tabla
+                {
+                    margin-top:20px;
+                }
+                #detalles-tabla th
+                {
+
+                    font-weight: 500;
+                }
+                .correlativo span
+                {
+                    font-weight: 300;
+                    font-size: 17px;
+                }
+                .correlativo
+                {
+                    margin-top: 10px;
+                    padding-top: 12px;
+                    padding-bottom: 15px;
+                    text-align:center;
+
+                }
+                .headder
+                {
+                    border-bottom: 1px dashed black;
+                    padding-bottom: 25px;
+                }
+                .header-tabla
+                {
+                    margin-bottom: 10px;
+                }
+                .tbl-body thead tr th
+                {
+                    font-size: 20px !important;
+                    padding: 10px !important;
+                }
+                .productos tr td span
+                {
+                 text-align:center;
+                }
+
+            </style>
+            <div class="container">
+                <div class="headder">
+            <table id="header-tabla" style="width:100%; border:bottom: 20px;">
+                <tr>
+                    <th style="width: 50%;"><strong><span class="c-nombre" t-field="o.company_id.name"></span></strong></th>
+                    <th style="width: 30%;"></th>
+                    <th style="width: 20%; vertical-align: middle;" rowspan="4"><img src='/web/binary/company_logo' style="width:100%"/></th>
+                </tr>
+                <tr>
+                    <td>Dirección: <span t-field="o.company_id.street" ></span></td>
+                </tr>
+                <tr>
+                    <td>Teléfono: <span t-field="o.company_id.phone" style="margin-right:5px;" ></span> RTN: <span t-field="o.company_id.nrc"></span></td>
+                </tr>
+                <tr>
+                    <td>Email: <span t-field="o.company_id.email" ></span></td>
+                </tr>
+                <tr>
+                     <td>CAI:<span t-field="o.company_id.nit" ></span></td>
+                </tr>
+            </table>
+            </div>
         <div class="header">
           <br/>
             <div class="col-xs-2">
