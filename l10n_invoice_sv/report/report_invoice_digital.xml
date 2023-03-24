@@ -683,7 +683,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <<td>
+                  <td>
                     N.R.C: <span t-field="o.partner_id.nrc"/>
                   </td>
                   <td>
