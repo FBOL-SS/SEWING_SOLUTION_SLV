@@ -3,7 +3,6 @@
   <data>
     <template id="report_invoice_document_digital">
         <div class="page article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
-
             <style>
                 span, td, th
                 {
@@ -81,7 +80,7 @@
                 </tr>
             </table>
             </div>
-        <div class="header">
+          <div class="header">
           <br/>
             <div class="col-xs-2">
               <span t-field="o.company_id.partner_id.street"/>
@@ -940,7 +939,7 @@
             </div>
           </div>
         </t>
-        <div class="footer">
+          <div class="footer">
           <style>
             td{
                 padding: 1px 2px;
@@ -1270,5 +1269,6 @@
             </div>
           </div>
         </div>
+    </div>
   </data>
 </odoo>
