@@ -6,10 +6,10 @@
         <div class="header">
           <br/>
           <div class="row">
-            <div class="col-xs-4">
+            <div class="col-xs-2">
               <img t-if="o.company_id.logo" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"/>
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-2">
               <span t-field="o.company_id.partner_id.street"/>
               <span t-field="o.company_id.partner_id.street2"/>
               <span t-field="o.company_id.partner_id.city"/>
