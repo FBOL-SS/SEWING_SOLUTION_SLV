@@ -87,6 +87,9 @@
                     Cliente: <span t-field="o.partner_id"/>
                   </td>
                   <td>
+                    RFC: <span t-field="o.partner_id.vat"/>
+                  </td>
+                  <td>
                     Fecha: <span t-field="o.invoice_date"/>
                   </td>
                 </tr>
