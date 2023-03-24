@@ -689,6 +689,8 @@
                   <td>
                     N.I.T: <span t-field="o.partner_id.vat"/>
                   </td>
+                </tr>
+                <tr>
                   <td colspan="2">
                     Condiciones de pago: <span t-field="o.invoice_payment_term_id"/>
                   </td>
