@@ -2,7 +2,6 @@
 <odoo>
   <data>
     <template id="report_invoice_document_digital">
-        <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
         <div class="header">
           <br/>
             <div class="col-xs-2">
