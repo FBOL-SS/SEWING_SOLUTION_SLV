@@ -1186,9 +1186,6 @@
             </div>
             <div class="col-xs-3">
               <br />
-              <t t-foreach="o.company_id.logo" t-as='sewing'>
-                <img t-if="sewing.logo" style="height: 30px; display:block; margin:auto" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(marca.logo)"/>
-              </t>
             </div>
           </div>
         </div>
