@@ -938,7 +938,6 @@
               </table>
             </div>
           </div>
-        </t>
           <div class="footer">
           <style>
             td{
@@ -1268,6 +1267,5 @@
               </t>
             </div>
           </div>
-    </div>   
   </data>
 </odoo>
