@@ -27,7 +27,7 @@
                   </tr>
                   <tr>
                     <td style="text-align:center;">
-                      <span t-field="o.phone"/>
+                      <span t-field="o.company_id.giro"/>
                     </td>
                   </tr>
                   <tr>
