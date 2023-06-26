@@ -90,7 +90,7 @@
               <span t-field="o.company_id.partner_id.state_id"/>
               <span t-field="o.company_id.partner_id.country_id"/>
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-2">
               <div style="-moz-border-radius:7px; -webkit-border-radius:7px; border:red 2px solid;">
                 <table style="color:red;" width="100%">
                   <tr>
