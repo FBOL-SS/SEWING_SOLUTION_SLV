@@ -7,7 +7,7 @@
           <br/>
           <div class="row">
             <div class="col-xs-4">
-              <img t-if="o.company_id.logo" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"style='display:block; width:100px;height:100px;'/>
+              <img t-if="o.company_id.logo" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"; style='display:block; width:100px;height:100px;'/>
             </div>
             <div class="col-xs-4">
               <span t-field="o.company_id.partner_id.street"/>
