@@ -10,6 +10,7 @@
               <div class="column-sm">
                 <img t-if="o.company_id.logo" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"/>
               </div>
+            </div>
             <div class="row">
               <div class="column-sm">
                 <span t-field="o.company_id.partner_id.street"/>
@@ -19,6 +20,7 @@
                 <span t-field="o.company_id.partner_id.state_id"/>
                 <span t-field="o.company_id.partner_id.country_id"/>
               </div>
+            </div>
             <div class="row">
               <div style="-moz-border-radius:7px; -webkit-border-radius:7px; border:red 2px solid;">
                 <table style="color:red;" width="100%">
