@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-    <template id="report_invoice_document_digital">
+     <template id="report_invoice_document_digital">
         <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
         <div class="header">
           <br/>
-            <div class="column-sm">
+          <div class="row">
+            <div class="col-xs-4">
               <img t-if="o.company_id.logo" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"/>
             </div>
-            <div class="column-sm">
+            <div class="col-xs-4">
               <span t-field="o.company_id.partner_id.street"/>
               <span t-field="o.company_id.partner_id.street2"/>
               <span t-field="o.company_id.partner_id.city"/>
@@ -16,17 +17,12 @@
               <span t-field="o.company_id.partner_id.state_id"/>
               <span t-field="o.company_id.partner_id.country_id"/>
             </div>
-            <div class="column-sm">
+            <div class="col-xs-4">
               <div style="-moz-border-radius:7px; -webkit-border-radius:7px; border:red 2px solid;">
                 <table style="color:red;" width="100%">
                   <tr>
                     <td style="text-align:center;">
                       <span style="font-size:15px" t-field="o.journal_id.name"></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="text-align:center;">
-                      <span t-field="o.company_id.giro"/>
                     </td>
                   </tr>
                   <tr>
@@ -44,7 +40,6 @@
             </div>
           </div>
         </div>
-      </div>
         <t t-if="o.journal_id.type_report == 'ccf'">
           <div class="page article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
             <style>
