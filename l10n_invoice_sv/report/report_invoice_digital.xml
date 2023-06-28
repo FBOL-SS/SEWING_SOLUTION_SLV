@@ -46,8 +46,6 @@
               </div>
             </div>
           </div>
-        </div>
-       </div>
         <t t-if="o.journal_id.type_report == 'ccf'">
           <div class="page article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
             <style>
