@@ -6,8 +6,15 @@
         <div class="header">
           <br/>
           <div class="row">
-            <div class="col-xs-4">
-              <img t-if="o.company_id.logo" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"/>
+                <div class="col-3 mb4">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 45px;" alt="Logo"/>
+                </div>
+                <div class="col-9 text-right" style="margin-top:22px;" t-field="company.report_header" name="moto"/>
+            </div>
+            <div t-if="company.logo or company.report_header" class="row zero_min_height">
+                <div class="col-12">
+                    <div style="border-bottom: 1px solid black;"/>
+                </div>
             </div>
             <div class="col-xs-4">
               <span t-field="o.company_id.partner_id.street"/>
