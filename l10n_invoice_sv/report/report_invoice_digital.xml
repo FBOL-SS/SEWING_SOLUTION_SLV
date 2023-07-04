@@ -7,9 +7,6 @@
           <br/>
           <div class="row">
             <div class="col-xs-4">
-              <img t-if="res_company.logo" t-att-src="'data:image/png;base64,%s' %res_company.logo"/>
-            </div>
-            <div class="col-xs-4">
               <span t-field="o.company_id.partner_id.street"/>
               <span t-field="o.company_id.partner_id.street2"/>
               <span t-field="o.company_id.partner_id.city"/>
