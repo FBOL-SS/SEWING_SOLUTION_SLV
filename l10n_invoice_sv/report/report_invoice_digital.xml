@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-     <template id="report_invoice_document_digital">
+    <template id="report_invoice_document_digital">
         <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
         <div class="header">
           <br/>
           <div class="row">
-              <div class="col-3 mb4">
-                <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 45px;" alt="Logo"/>
-              </div>
-                <div t-if="o.company_id.logo" class="row zero_min_height">
-                    <div class="col-12">
-                    <div style="border-bottom: 1px solid black;"/>
-                </div>
+            <div class="col-xs-4">
+              <img t-if="o.company_id.logo" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"/>
             </div>
             <div class="col-xs-4">
               <span t-field="o.company_id.partner_id.street"/>
@@ -31,6 +26,11 @@
                     </td>
                   </tr>
                   <tr>
+                    <td style="text-align:center;">
+                      <span t-field="o.number"/>
+                    </td>
+                  </tr>
+                  <tr>
                     <td style="text-align:center;font-size:13px;">
                       <span>NRC: </span><span t-field="o.company_id.company_registry"/>
                     </td>
@@ -44,6 +44,7 @@
               </div>
             </div>
           </div>
+        </div>
         <t t-if="o.journal_id.type_report == 'ccf'">
           <div class="page article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
             <style>
@@ -97,7 +98,7 @@
                 </tr>
                 <tr>
                   <td id="dirrecion" colspan="4">
-                    Direcion:
+                    Dirrecion:
                         <span t-if="o.partner_id.street">
                           <span t-field="o.partner_id.street"/>
                         </span>
@@ -1185,10 +1186,12 @@
             </div>
             <div class="col-xs-3">
               <br />
+              <t t-foreach="o.company_id.marca_ids" t-as='marca'>
+                <img t-if="marca.logo" style="height: 30px; display:block; margin:auto" t-attf-class="img img-responsive" t-att-src="'data:image/png;base64,%s' % to_text(marca.logo)"/>
+              </t>
             </div>
           </div>
         </div>
-      </div>
     </template>
   </data>
 </odoo>
