@@ -26,11 +26,6 @@
                     </td>
                   </tr>
                   <tr>
-                    <td style="text-align:center;">
-                      <span t-field="o.number"/>
-                    </td>
-                  </tr>
-                  <tr>
                     <td style="text-align:center;font-size:13px;">
                       <span>NRC: </span><span t-field="o.company_id.company_registry"/>
                     </td>
