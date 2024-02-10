@@ -1,6 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sale_product_history_excel,sale.product.history.excel,model_sale_product_history_excel,,1,1,1,1
-access_sale_product_excel,sale.product.excel,model_sale_product_excel,,1,1,1,1
-
-
-
